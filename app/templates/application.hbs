@@ -1,0 +1,23 @@
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          {{#link-to 'index'}}
+            Home
+          {{/link-to}}
+        </div>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          {{#link-to 'app'}}
+            App
+          {{/link-to}}
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>
