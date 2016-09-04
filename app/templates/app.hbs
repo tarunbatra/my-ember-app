@@ -1,1 +1,18 @@
-{{outlet}}
+<table class="table">
+  <thead class="thead">
+    <tr>
+      <th>Name</th>
+      <th>Account</th>
+      <th>Since</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |data|}}
+      <tr>
+        <td>{{data.firstName}} {{data.lastName}}</td>
+        <td>{{data.account}}</td>
+        <td>{{data.customerSince}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
