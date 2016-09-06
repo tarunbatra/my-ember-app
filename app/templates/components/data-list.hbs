@@ -1,0 +1,22 @@
+<table class="table">
+  <thead class="thead">
+    <tr>
+      <th>Name</th>
+      <th>Account</th>
+      <th>Relationship Manager</th>
+      <th>Revenue</th>
+      <th>Since</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list as |item|}}
+      <tr>
+        <td>{{item.firstName}} {{item.lastName}}</td>
+        <td>{{item.account}}</td>
+        <td>{{item.relationshipManager}}</td>
+        <td>{{item.revenueGenerated}}</td>
+        <td>{{format-date item.customerSince}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
