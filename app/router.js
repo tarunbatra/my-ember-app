@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('app');
+  this.route('crm');
 });
 
 export default Router;
