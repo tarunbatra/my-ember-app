@@ -1,7 +1,17 @@
+<br>
+<label>Select Relationship Manager</label>
+<br>
 <select onchange={{action 'filter' value="target.value"}}>
   {{#each options as |listItem|}}
     <option value={{listOption}} selected={{'eq' listOption listItem}}>{{listItem}}</option>
   {{/each}}
 </select>
-{{input value=value key-up=(action 'filter') class="light" placeholder="Filter"}}
+{{input value=value key-up=(action 'filter') class="light" placeholder="or start typing"}}
+<br>
+<br>
+<label>Choose revenue range</label>
+<br>
+{{input value=min type="number" key-up=(action 'filter' '') class="light" placeholder="Min"}}
+{{input value=max type="number" key-up=(action 'filter' '') class="light" placeholder="Max"}}
+
 {{data-list list=filteredList}}
