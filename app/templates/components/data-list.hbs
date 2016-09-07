@@ -4,8 +4,16 @@
       <th>Name</th>
       <th>Account</th>
       <th>Relationship Manager</th>
-      <th>Revenue</th>
-      <th>Since</th>
+      <th>
+        <a onclick={{action 'toggleSort' 'revenueGenerated'}}>
+          Revenue
+        </a>
+      </th>
+      <th>
+        <a onclick={{action 'toggleSort' 'customerSince'}}>
+          Since
+        </a>
+      </th>
     </tr>
   </thead>
   <tbody>
