@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import  _ from 'lodash/lodash';
 
 export default Ember.Component.extend({
   init: function() {
@@ -9,14 +8,13 @@ export default Ember.Component.extend({
   actions: {
     filter: function(params) {
       let data = this.get('list');
-      //
-      // Filter logic which isnt working because
-      // I dont yet understand Ember object system
-      //
-      // let filteredList = _.filter(data, function (dataItem) {
-      //   return dataItem['registeredManager'].indexOf(params) !== -1;
-      // });
-      this.set('filteredList', data);
+
+      // Filtering logic
+      let filteredList = data.filter(function (dataItem) {
+        let rshipManager = dataItem.get('relationshipManager');
+        return rshipManager.toLowerCase().indexOf(params) !== -1;
+      });
+      this.set('filteredList', filteredList);
     }
   }
 });
