@@ -1,2 +1,7 @@
+<select onchange={{action 'filter' value="target.value"}}>
+  {{#each options as |listItem|}}
+    <option value={{listOption}} selected={{'eq' listOption listItem}}>{{listItem}}</option>
+  {{/each}}
+</select>
 {{input value=value key-up=(action 'filter') class="light" placeholder="Filter"}}
 {{data-list list=filteredList}}
