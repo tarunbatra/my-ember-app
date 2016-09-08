@@ -43,7 +43,7 @@ export default Ember.Component.extend({
     filter: function(searchText) {
 
       let list = this.get('list');
-      console.log('---',searchText);
+
       // Filtering logic
       let filteredList = searchText ? _filterByRelationshipManager(list, searchText): list;
 
